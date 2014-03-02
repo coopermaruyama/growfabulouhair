@@ -104,7 +104,7 @@
                         Get a 60 Day Supply ($79.99)<br/>
                         <span>Guaranteed Results or Your Money Back</span>
                     </button>
-                    <p class="notice">Secure Checkout. We'll never share your information.</p>
+                    <p class="notice"><span class="glyphicon glyphicon-lock"></span> Secure Checkout. We'll never share your information.</p>
                 </div>
             </div>
         </div>
@@ -118,30 +118,48 @@
 
         <div class="row">
             <div class="col-md-4 ">
-                <p>"I have had dry, thinning hair for quite a while now. I was told that as I get older, I can only
-                    expect for this condition to get worse. I started experiencing baldness at the crown of my head.
-                    I’ve gone to dermatologists several times the past year to get shots in the bald area to stimulate
-                    hair growth. It didn’t work.”</p>
+                <div class="bubble">
 
-                <p class="right testi_quote">Jared Rawlins</p>
+                    <p>"I have had dry, thinning hair for quite a while now. I was told that as I get older, I can only
+                        expect for this condition to get worse. I started experiencing baldness at the crown of my head.
+                        I’ve gone to dermatologists several times the past year to get shots in the bald area to stimulate
+                        hair growth. It didn’t work.”</p>
+                    <p class="testi_quote">Jared Rawlins</p>
+
+                </div>
+                <div class="bubble-below">
+                    <img src="images/bubble_image_1.gif" />
+                </div>
             </div>
 
             <div class="col-md-4 ">
-                <p>"I have had dry, thinning hair for quite a while now. I was told that as I get older, I can only
-                    expect for this condition to get worse. I started experiencing baldness at the crown of my head.
-                    I’ve gone to dermatologists several times the past year to get shots in the bald area to stimulate
-                    hair growth. It didn’t work.”</p>
+                <div class="bubble">
 
-                <p class="right testi_quote">Jared Rawlins</p>
+                    <p>"I have had dry, thinning hair for quite a while now. I was told that as I get older, I can only
+                        expect for this condition to get worse. I started experiencing baldness at the crown of my head.
+                        I’ve gone to dermatologists several times the past year to get shots in the bald area to stimulate
+                        hair growth. It didn’t work.”</p>
+                    <p class="testi_quote">Jared Rawlins</p>
+
+                </div>
+                <div class="bubble-below">
+                    <img src="images/bubble_image_1.gif" />
+                </div>
             </div>
 
             <div class="col-md-4 ">
-                <p>"I have had dry, thinning hair for quite a while now. I was told that as I get older, I can only
-                    expect for this condition to get worse. I started experiencing baldness at the crown of my head.
-                    I’ve gone to dermatologists several times the past year to get shots in the bald area to stimulate
-                    hair growth. It didn’t work.”</p>
+                <div class="bubble">
+                    
+                    
+                    <div class="video"><div class="pull-left"><video id="vid1" src="" class="video-js vjs-default-skin" controls preload="auto" width="150" height="150" data-setup='{ "techOrder": ["vimeo"], "src": "https://vimeo.com/63186969", "loop": true, "autoplay": false }'>
+                        <p>Video Playback Not Supported</p>
+                    </video></div>
+                    <p class="testi_quote pull-right">Jared Rawlins <br/><small>San Diego, CA</small></p></div>
 
-                <p class="right testi_quote">Jared Rawlins</p>
+                </div>
+                <div class="bubble-below">
+                    <img src="images/bubble_image_1.gif" />
+                </div>
             </div>
         </div>
 
@@ -214,11 +232,9 @@
                 <p>After</p>
                 <img src="images/before-and-after/kim-after.png" alt="Kim After">
             </div>
-            <br>
-
-            <div class="smalltitle">
-                <p>Get results like this in only 3 months!</p>
-            </div>
+        </div>
+        <div class="smalltitle">
+            <p>Get results like this in only 3 months!</p>
         </div>
     </div>
     <!-- End before and after-->
@@ -509,6 +525,7 @@
             Get a 60 Day Supply ($79.99)<br/>
             <span>Guaranteed Results or Your Money Back</span>
         </button>
+
         <p class="notice">Secure Checkout. We'll never share your information.</p>
 
         <div class="row">
@@ -582,8 +599,10 @@
 
 <!-- build:js scripts/main.js -->
 <script src="bower_components/jquery/jquery.js"></script>
+<script src="bower_components/video.js/video.dev.js"></script>
+<script src="bower_components/videojs-vimeo/vjs.vimeo.js"></script>
+<script src="scripts/jquery.pseudo.js"></script>
 <script src="scripts/main.js"></script>
-<script src="scripts/hello.js"></script>
 <!-- endbuild -->
 
 <!-- build:js scripts/vendor/bootstrap.js -->

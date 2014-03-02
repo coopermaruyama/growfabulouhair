@@ -1,0 +1,57 @@
+/***
+*   Modules
+*/
+
+.bubble
+{
+  position: relative;
+  
+  width: auto;
+  height: auto;
+  padding: 15px;
+  background: #ececec;
+  border: 1px solid #bebebe;
+
+  .lh-border-radius(10px);
+  .lh-box-shadow(0px 1px #bebebe);
+
+  .video {
+    overflow: hidden;
+  }
+  .testi_quote {
+    text-align: right;
+    small {
+      font-weight: normal;
+    }
+  }
+
+  &:after
+  {
+    content: '';
+    background: url(../images/bubble_tip.png) no-repeat;
+
+    display: block;
+    width: 29px;
+    height: 14px;
+
+    z-index: 1;
+
+    bottom: -14px;
+    left: 50%;
+    position: absolute;
+    margin-left: -15px;
+  }
+
+  & + .bubble-below {
+    padding-top: 40px;
+    text-align: center;
+  }
+}
+
+h1 {
+  font-family: 'Bree Serif', serif;
+}
+
+#main h1 {
+  margin-bottom: 25px;
+}

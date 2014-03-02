@@ -26,3 +26,6 @@ dist
 .tmp
 app/bower_components
 old
+
+# Compiled CSS
+styles/*.css
