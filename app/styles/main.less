@@ -1,6 +1,10 @@
 // Fonts
 
 @import "../bower_components/bootstrap/less/bootstrap.less";
+
+// Bootstrap theme
+
+@import "../bower_components/bootstrap/less/theme";
 @icon-font-path: "../fonts/glyphicons/";
 
 @import url(http://fonts.googleapis.com/css?family=Bree+Serif);
@@ -13,6 +17,9 @@
 
 @import "../bower_components/video.js/video-js.css";
 
+// C3
+
+@import "../bower_components/c3/c3.css";
 
 
 .browsehappy {
@@ -53,22 +60,29 @@
 
 #as-seen-on{
   width: 100%;
-  margin-top: 16px;
-}
+  margin: 16px 0;
 
-#as-seen-on ul{
-  list-style: none;
-  margin: 0px;
-  padding: 0px;
-}
 
-#as-seen-on ul li{
-  display: inline;
-  margin-right: 10px;
-}
+  ul{
+    list-style: none;
+    margin: 0px;
+    display: inline;
+    padding: 0px;
+  }
 
-#as-seen-on ul li:last-child{
-  margin-right: 0px;
+  ul li{
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  ul li:last-child{
+    margin-right: 0px;
+  }
+
+  p {
+    display: inline-block;
+    font-family: serif;
+  }
 }
 /*
 ==================================
@@ -101,6 +115,8 @@
   color: #000;
   font-size: 26px;
   margin-top: 0px;
+  margin-top: 15px;
+  margin-bottom: 30px;
 }
 
 
@@ -181,6 +197,7 @@
 }
 
 .checklist button {
+  &:hover {-webkit-filter: saturate(0.5);}
   &:before, .before {
     content: "";
     position: absolute;
@@ -230,6 +247,9 @@ p.notice{
   text-align: left;
   padding-left: 20px;
   font-size: 18px;
+  margin-top: 10px;
+  color: #000;
+
 }
 
 .ideal{
@@ -257,6 +277,7 @@ p.notice{
 
 .testi_quote{
   font-weight: 700;
+  text-align: right;
 }
 
 /*
@@ -292,6 +313,7 @@ p.notice{
 
 .before-and-after {
   overflow: hidden;
+  padding-left: 75px;
 }
 .smalltitle{
   text-align: left;

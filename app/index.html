@@ -15,6 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="stylesheet" href="styles/main.css">
+    <link href="styles/wizard/wizard.css" rel="stylesheet" />
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
@@ -35,7 +36,7 @@
 
         <div class="col-md-8">
             <div id="as-seen-on">
-                <p class="left">AS SEEN ON:</p>
+                <p>AS SEEN ON:</p>
                 <ul>
                     <li><img src="images/as-seen-on-logos/curlynikki.png" alt="Curly Nikki Logo"></li>
                     <li><img src="images/as-seen-on-logos/daily-motion.png" alt="Daily Motion Logo"></li>
@@ -104,7 +105,8 @@
                         Get a 60 Day Supply ($79.99)<br/>
                         <span>Guaranteed Results or Your Money Back</span>
                     </button>
-                    <p class="notice"><span class="glyphicon glyphicon-lock"></span> Secure Checkout. We'll never share your information.</p>
+                    <p class="notice"><span class="glyphicon glyphicon-lock"></span> Secure Checkout. We'll never share
+                        your information.</p>
                 </div>
             </div>
         </div>
@@ -122,13 +124,15 @@
 
                     <p>"I have had dry, thinning hair for quite a while now. I was told that as I get older, I can only
                         expect for this condition to get worse. I started experiencing baldness at the crown of my head.
-                        I’ve gone to dermatologists several times the past year to get shots in the bald area to stimulate
+                        I’ve gone to dermatologists several times the past year to get shots in the bald area to
+                        stimulate
                         hair growth. It didn’t work.”</p>
+
                     <p class="testi_quote">Jared Rawlins</p>
 
                 </div>
                 <div class="bubble-below">
-                    <img src="images/bubble_image_1.gif" />
+                    <img src="images/bubble_image_1.gif"/>
                 </div>
             </div>
 
@@ -137,28 +141,41 @@
 
                     <p>"I have had dry, thinning hair for quite a while now. I was told that as I get older, I can only
                         expect for this condition to get worse. I started experiencing baldness at the crown of my head.
-                        I’ve gone to dermatologists several times the past year to get shots in the bald area to stimulate
+                        I’ve gone to dermatologists several times the past year to get shots in the bald area to
+                        stimulate
                         hair growth. It didn’t work.”</p>
+
                     <p class="testi_quote">Jared Rawlins</p>
 
                 </div>
                 <div class="bubble-below">
-                    <img src="images/bubble_image_1.gif" />
+                    <img src="images/bubble_image_1.gif"/>
                 </div>
             </div>
 
             <div class="col-md-4 ">
                 <div class="bubble">
-                    
-                    
-                    <div class="video"><div class="pull-left"><video id="vid1" src="" class="video-js vjs-default-skin" controls preload="auto" width="150" height="150" data-setup='{ "techOrder": ["vimeo"], "src": "https://vimeo.com/63186969", "loop": true, "autoplay": false }'>
-                        <p>Video Playback Not Supported</p>
-                    </video></div>
-                    <p class="testi_quote pull-right">Jared Rawlins <br/><small>San Diego, CA</small></p></div>
+
+
+                    <div class="row-fluid">
+                        <div class="col-xs-6">
+                            <video id="vid1" src="" class="video-js vjs-default-skin" controls preload="auto"
+                                   width="100%" height="150"
+                                   data-setup='{ "techOrder": ["vimeo"], "src": "https://vimeo.com/63186969", "loop": true, "autoplay": false }'>
+                                <p>Video Playback Not Supported</p>
+                            </video>
+                        </div>
+                        <div class="col-xs-6">
+                            <p class="testi_quote">Jared Rawlins <br/>
+                                <small>San Diego, CA</small>
+                            </p>
+                        </div>
+
+                    </div>
 
                 </div>
                 <div class="bubble-below">
-                    <img src="images/bubble_image_1.gif" />
+                    <img src="images/bubble_image_1.gif"/>
                 </div>
             </div>
         </div>
@@ -171,7 +188,7 @@
 <div class="col-md-12">
     <div class="col-md-6 title">
         <h1>Proven Results</h1>
-        <img src="images/graph.jpg" alt="Proven results graph" class="responsive">
+        <div id="chart"></div>
     </div>
     <div class="col-md-6 texttop">
         <p>Mira Hair Oil (see “A” in chart) was tested against two other herbal formulations (B and C in chart) in a
@@ -575,9 +592,7 @@
             </div>
         </div>
     </div>
-</footer>
-
-
+</footer
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
     (function (b, o, i, l, e, r) {
@@ -601,7 +616,12 @@
 <script src="bower_components/jquery/jquery.js"></script>
 <script src="bower_components/video.js/video.dev.js"></script>
 <script src="bower_components/videojs-vimeo/vjs.vimeo.js"></script>
-<script src="scripts/jquery.pseudo.js"></script>
+<script src="bower_components/d3/d3.js"></script>
+<script src="bower_components/c3/c3.js"></script>
+<script src="bower_components/jquery.inview/jquery.inview.js"></script>
+<script src="bower_components/spinjs/spin.js"></script>
+<script src="bower_components/move.js/move.js"></script>
+<script src="scripts/wizard.js" type="text/javascript"></script>
 <script src="scripts/main.js"></script>
 <!-- endbuild -->
 
@@ -619,5 +639,105 @@
 <script src="bower_components/bootstrap/js/collapse.js"></script>
 <script src="bower_components/bootstrap/js/tab.js"></script>
 <!-- endbuild -->
+<div class="wizard" id="coWizard" data-title="Checkout">
+    <div class="wizard-card card1" data-cardname="Cart details">
+        <h3>Cart</h3>
+        <table class="table-striped table table-hover items">
+            <thead>
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><img src="http://localhost:63342/hair_thing/app/images/miraoil.jpg" width="32" height="32" class="img-thumbnail"></td>
+                <td>Mira Hair Oil</td>
+                <td><span class="price" data-price="79.99">$79.99</span></td>
+                <td><input class="quantity" type="number" min="1" step="1" value="1"></td>
+                <td><span class="total">$79.99</span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="wizard-card" data-cardname="Shipping information">
+        <h3>Shipping information</h3>
+        <p>Lorem ipsum dolor sit amet consequetur it.</p>
+        <form class="form-horizontal">
+            <fieldset>
+                <p><input type="text" placeholder="Address Line 1"></p>
+                <p><input type="text" placeholder="Address Line 2"></p>
+                <p><input type="text" placeholder="Country"> <input type="text" placeholder="Zip code"></p>
+                <p><input type="text" placeholder="Phone number"></p>
+                <p><textarea placeholder="Comments..."></textarea></p>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="wizard-card" data-cardname="Payment">
+        <h3>Payment</h3>
+        <p>Redirecting to <img src="images/paypal.png" style="width:50px; vertical-align: middle;"></p>
+        <div id="spinner"></div>
+    </div>
+
+    <div class="wizard-card" data-cardname="Thank you">
+        <h3>Thank you! </h3>
+        <p>For shopping with us. <a id="close">Close</a></p>
+
+    </div>
+</div>
+<script type="text/javascript">
+    (function($) {
+        var options = {
+            keyboard : false,
+            contentHeight : 400,
+            contentWidth : 700,
+            backdrop: 'static'
+        };
+        var wizard = $("#coWizard").wizard(options);
+
+        $('button').on('click', function() {
+            wizard.show();
+        });
+
+        function updateQuantity() {
+            var price = 79.99,
+                quantity = +$(this).val();
+
+            $('#coWizard').find('.card1 span.total').text( '$' + parseFloat(price*quantity).toFixed(2) );
+        }
+
+        $('#coWizard .card1 input[type="number"].quantity').change(updateQuantity);
+
+        var opts = {
+            lines: 7, // The number of lines to draw
+            length: 5, // The length of each line
+            width: 3, // The line thickness
+            radius: 10, // The radius of the inner circle
+            corners: 1, // Corner roundness (0..1)
+            rotate: 0, // The rotation offset
+            direction: 1, // 1: clockwise, -1: counterclockwise
+            color: '#000', // #rgb or #rrggbb or array of colors
+            speed: 1, // Rounds per second
+            trail: 60, // Afterglow percentage
+            shadow: true, // Whether to render a shadow
+            hwaccel: true, // Whether to use hardware acceleration
+            className: 'spinner', // The CSS class to assign to the spinner
+            zIndex: 2e9, // The z-index (defaults to 2000000000)
+            top: 'auto', // Top position relative to parent in px
+            left: 'auto' // Left position relative to parent in px
+        };
+
+        var target = document.getElementById('spinner');
+        var spinner = new Spinner(opts).spin(target);
+
+        $('#close').on('click', function() {
+            wizard.close();
+        })
+    })(jQuery);
+</script>
 </body>
 </html>
