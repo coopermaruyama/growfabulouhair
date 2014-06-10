@@ -1,4 +1,4 @@
-(function ($){
+(function ($) {
 
     /***
      * Video.js
@@ -42,4 +42,64 @@
                 });
         }
     });
+
+
+    /***
+     * Before & After 
+     */
+    $(".controls ul li").first().addClass("active");
+    $(".controls .left-arrow a, .controls .right-arrow a").click(function(event) {
+        run = true;
+        event.preventDefault();
+        $(this).parent().data("executing",true);
+        direction = /right-arrow/.test($(this).parent().attr("class")) ? "next" : "previous";
+        $currentThumbnail = $(this).closest(".controls").find("ul li.active").first();
+        currentVisibleArray = $.grep($("#before-after-list .before-after-list-item"), function(element,index) {
+            return $(element).is(":visible");
+        });
+        $currentVisible = $(currentVisibleArray[0]);
+
+        
+        if (direction == "next") {
+            if ($currentVisible[0] == $("#before-after-list .before-after-list-item").last()[0]) {
+                run = false;
+                return;
+            };
+            $currentVisible.next(".before-after-list-item").addClass("moving").css('left','100%');
+            $currentVisible.animate({
+                left: '-=100%',
+            }, 'slow', function() {
+                    $(this).hide();
+            });
+            $currentVisible.next(".before-after-list-item").animate({
+                left: '0%'
+            }, 'slow', function() {
+                $(this).removeClass("moving").show();
+            });
+            if ( run == true ) {
+                $currentThumbnail.removeClass("active").next("li").addClass("active");
+            }
+        } else {
+            if ($currentVisible[0] == $("#before-after-list .before-after-list-item:eq(0)")[0]) {
+                run = false;
+                return;
+            }
+            $currentVisible.prev(".before-after-list-item").addClass("moving").css('left','-100%');
+            $currentVisible.animate({
+                left: '+=100%',
+            }, 'slow', function() {
+                    $(this).hide();
+            });
+            $currentVisible.prev(".before-after-list-item").animate({
+                left: '0%'
+            }, 'slow', function() {
+                $(this).removeClass("moving").show();
+            });
+            if ( run == true ) {
+                $currentThumbnail.removeClass("active").prev("li").addClass("active");
+            }
+        }
+        $(this).parent().data("executing", false);
+    });
+
 })(jQuery);

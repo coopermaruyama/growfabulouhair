@@ -1,614 +1,685 @@
 <!doctype html>
 <!--[if lt IE 7]>
-<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+    <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>
-<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+    <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>
-<html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js"> <!--<![endif]-->
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link rel="stylesheet" href="styles/main.css">
-    <link href="styles/wizard/wizard.css" rel="stylesheet" />
-    <!-- build:js scripts/vendor/modernizr.js -->
-    <script src="bower_components/modernizr/modernizr.js"></script>
-    <!-- endbuild -->
-</head>
-<body>
-<body>
+    <html class="no-js lt-ie9"> <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:800italic,400,800,600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="styles/main.css">
+        <link href="styles/wizard/wizard.css" rel="stylesheet" />
+        <!-- build:js scripts/vendor/modernizr.js -->
+        <script src="bower_components/modernizr/modernizr.js"></script>
+        <script src="https://checkout.stripe.com/checkout.js"></script>
+        <!-- endbuild -->
+    </head>
+    <body>
+        <body>
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
-<![endif]-->
-<header id="top-header">
-    <div class="container">
-        <div class="col-md-4">
-            <div id="logo">
-                <img src="images/logo.png" alt="Logo">
-            </div>
-        </div>
-
-        <div class="col-md-8">
-            <div id="as-seen-on">
-                <p>AS SEEN ON:</p>
-                <ul>
-                    <li><img src="images/as-seen-on-logos/curlynikki.png" alt="Curly Nikki Logo"></li>
-                    <li><img src="images/as-seen-on-logos/daily-motion.png" alt="Daily Motion Logo"></li>
-                    <li><img src="images/as-seen-on-logos/blackhairplanet-logo.png" alt="Black Hair Planet Logo"></li>
-                    <li><img src="images/as-seen-on-logos/womens-hair-loss-project-logo.png"
-                             alt="Womens Hair Loss Project"></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</header>
-<section id="upper-main">
-    <div class="container">
-        <div class="col-md-12">
-            <div class="title">
-                <h1>Grow Thicker, More Beautiful Hair 2-3x Faster</h1>
-
-                <h2>Guaranteed Results - All Natural Ingredients - Ideal for All Hair Types</h2>
-            </div>
-        </div>
-
-        <div class="col-md-12">
-            <div class="col-md-6"><!-- Before and after -->
-                <div class="before-and-after">
-                    <div class="before left">
-                        <p>Before</p>
-                        <img src="images/before-and-after/kim-before.png" alt="Kim Before">
-                    </div>
-
-                    <div class="after left">
-                        <p>After</p>
-                        <img src="images/before-and-after/kim-after.png" alt="Kim After">
-                    </div>
-
-                    <div class="cl"></div>
-
-                    <div class="controls">
-                        <div class="left-arrow">
-                            <a href="#"><img src="images/left-arrow.png" alt="Left Arrow"></a>
-                        </div>
-                        <div class="right-arrow">
-                            <a href="#"><img src="images/right-arrow.png" alt="Right Arrow"></a>
-                        </div>
-                        <ul>
-                            <li><img src="images/before-and-after/kim-thumb.png" alt="Kim Thumbnail"></li>
-                            <li><img src="images/before-and-after/jenny-thumb.png" alt="Jenny Thumbnail"></li>
-                            <li><img src="images/before-and-after/kim-thumb.png" alt="Kim Thumbnail"></li>
-                            <li><img src="images/before-and-after/jenny-thumb.png" alt="Jenny Thumbnail"></li>
-                        </ul>
-                    </div>
-                    <div class="cl"></div>
+    <![endif]-->
+    <header id="top-header">
+        <div class="container">
+            <div class="col-md-4">
+                <div id="logo">
+                    <img src="images/logo.png" alt="Logo">
                 </div>
             </div>
-            <!-- End before and after-->
 
-
-            <div class="col-md-6">
-                <div class="checklist">
+            <div class="col-md-8">
+                <div id="as-seen-on">
+                    <p>AS SEEN ON:</p>
                     <ul>
-                        <li>Speeds up hair growth 2-3x</li>
-                        <li>Thickens Hair</li>
-                        <li>Reverses hair loss</li>
-                        <li>Reduces Frizz</li>
-                    </ul>
-                    <button>
-                        Get a 60 Day Supply ($79.99)<br/>
-                        <span>Guaranteed Results or Your Money Back</span>
-                    </button>
-                    <p class="notice"><span class="glyphicon glyphicon-lock"></span> Secure Checkout. We'll never share
-                        your information.</p>
-                </div>
-            </div>
-        </div>
-        <!-- End 12 col -->
+                        <li><img src="images/as-seen-on-logos/curlynikki.png" alt="Curly Nikki Logo"></li>
+                        <li><img src="images/as-seen-on-logos/daily-motion.png" alt="Daily Motion Logo"></li>
+                        <li><img src="images/as-seen-on-logos/blackhairplanet-logo.png" alt="Black Hair Planet Logo"></li>
+                        <li><img src="images/as-seen-on-logos/womens-hair-loss-project-logo.png"
+                           alt="Womens Hair Loss Project"></li>
+                       </ul>
+                   </div>
+               </div>
+           </div>
+       </header>
+       <section id="upper-main">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="title">
+                    <h1>Grow Thicker, More Beautiful Hair 2-3x Faster</h1>
 
-        <div class="col-md-12">
-            <div class="ideal">
-                <p>Ideal for Slow Growing, Curly, Frizzy, or Thinning Hair</p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-4 ">
-                <div class="bubble">
-
-                    <p>"I have had dry, thinning hair for quite a while now. I was told that as I get older, I can only
-                        expect for this condition to get worse. I started experiencing baldness at the crown of my head.
-                        I’ve gone to dermatologists several times the past year to get shots in the bald area to
-                        stimulate
-                        hair growth. It didn’t work.”</p>
-
-                    <p class="testi_quote">Jared Rawlins</p>
-
-                </div>
-                <div class="bubble-below">
-                    <img src="images/bubble_image_1.gif"/>
+                    <h2>Guaranteed Results - All Natural Ingredients - Ideal for All Hair Types</h2>
                 </div>
             </div>
 
-            <div class="col-md-4 ">
-                <div class="bubble">
-
-                    <p>"I have had dry, thinning hair for quite a while now. I was told that as I get older, I can only
-                        expect for this condition to get worse. I started experiencing baldness at the crown of my head.
-                        I’ve gone to dermatologists several times the past year to get shots in the bald area to
-                        stimulate
-                        hair growth. It didn’t work.”</p>
-
-                    <p class="testi_quote">Jared Rawlins</p>
-
-                </div>
-                <div class="bubble-below">
-                    <img src="images/bubble_image_1.gif"/>
-                </div>
-            </div>
-
-            <div class="col-md-4 ">
-                <div class="bubble">
-
-
-                    <div class="row-fluid">
-                        <div class="col-xs-6">
-                            <video id="vid1" src="" class="video-js vjs-default-skin" controls preload="auto"
-                                   width="100%" height="150"
-                                   data-setup='{ "techOrder": ["vimeo"], "src": "https://vimeo.com/63186969", "loop": true, "autoplay": false }'>
-                                <p>Video Playback Not Supported</p>
-                            </video>
-                        </div>
-                        <div class="col-xs-6">
-                            <p class="testi_quote">Jared Rawlins <br/>
-                                <small>San Diego, CA</small>
-                            </p>
+            <div class="col-md-12">
+                <div class="col-md-6"><!-- Before and after -->
+                    <div class="before-and-after">
+                        <div id="before-after-list">
+                            <div class="before-after-list-item one">
+                                <div class="before left">
+                                    <p>Before</p>
+                                    <img src="images/before-and-after/kim-before.png" alt="Kim Before">
+                                </div>
+                                
+                                <div class="after left">
+                                    <p>After</p>
+                                    <img src="images/before-and-after/kim-after.png" alt="Kim After">
+                                </div>
+                            </div>
+                            <div class="before-after-list-item two">
+                                <div class="before left">
+                                    <p>Before</p>
+                                    <img src="images/before-and-after/kim-before.png" alt="Kim Before">
+                                </div>
+                                
+                                <div class="after left">
+                                    <p>After</p>
+                                    <img src="images/before-and-after/kim-after.png" alt="Kim After">
+                                </div>
+                            </div>
+                            <div class="before-after-list-item three">
+                                <div class="before left">
+                                    <p>Before</p>
+                                    <img src="images/before-and-after/kim-before.png" alt="Kim Before">
+                                </div>
+                                
+                                <div class="after left">
+                                    <p>After</p>
+                                    <img src="images/before-and-after/kim-after.png" alt="Kim After">
+                                </div>
+                            </div>
+                            <div class="before-after-list-item four">
+                                <div class="before left">
+                                    <p>Before</p>
+                                    <img src="images/before-and-after/kim-before.png" alt="Kim Before">
+                                </div>
+                                
+                                <div class="after left">
+                                    <p>After</p>
+                                    <img src="images/before-and-after/kim-after.png" alt="Kim After">
+                                </div>
+                            </div>
                         </div>
 
+                        <div class="cl"></div>
+
+                        <div class="controls">
+                            <div class="left-arrow">
+                                <a href="#"><img src="images/left-arrow.png" alt="Left Arrow"></a>
+                            </div>
+                            <div class="right-arrow">
+                                <a href="#"><img src="images/right-arrow.png" alt="Right Arrow"></a>
+                            </div>
+                            <ul>
+                                <li><img src="images/before-and-after/kim-thumb.png" alt="Kim Thumbnail"></li>
+                                <li><img src="images/before-and-after/jenny-thumb.png" alt="Jenny Thumbnail"></li>
+                                <li><img src="images/before-and-after/kim-thumb.png" alt="Kim Thumbnail"></li>
+                                <li><img src="images/before-and-after/jenny-thumb.png" alt="Jenny Thumbnail"></li>
+                            </ul>
+                        </div>
+                        <div class="cl"></div>
+                    </div>
+                </div>
+                <!-- End before and after-->
+
+
+                <div class="col-md-6">
+                    <div class="checklist">
+                        <ul>
+                            <li>Speeds up hair growth 2-3x</li>
+                            <li>Thickens Hair</li>
+                            <li>Reverses hair loss</li>
+                            <li>Reduces Frizz</li>
+                        </ul>
+                       <!--  <a href="http://www.mcssl.com/SecureCart/AddItem.ashx?mid=6B082A34-C49F-4A79-89D9-515773F2D171&pid=1533ce4dfa5148f2aeca8af1945ed50f&bn=1"> -->
+                            <button class="cta-main">
+                                Get a 60 Day Supply ($79.99)<br/>
+                                <span>Guaranteed Results or Your Money Back</span>
+                            </button>
+                        <!-- </a> -->
+                        <p class="notice"><span class="glyphicon glyphicon-lock"></span> Secure Checkout. We'll never share
+                            your information.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End 12 col -->
+
+                <div class="col-md-12">
+                    <div class="ideal">
+                        <p>Ideal for Slow Growing, Curly, Frizzy, or Thinning Hair</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 ">
+                        <div class="bubble">
+
+                            <p>"I have had dry, thinning hair for quite a while now. I was told that as I get older, I can only
+                                expect for this condition to get worse. I started experiencing baldness at the crown of my head.
+                                I’ve gone to dermatologists several times the past year to get shots in the bald area to
+                                stimulate
+                                hair growth. It didn’t work.”</p>
+
+                                <p class="testi_quote">Jared Rawlins</p>
+
+                            </div>
+                            <div class="bubble-below">
+                                <img src="images/bubble_image_1.gif"/>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 ">
+                            <div class="bubble">
+
+                                <p>"I have had dry, thinning hair for quite a while now. I was told that as I get older, I can only
+                                    expect for this condition to get worse. I started experiencing baldness at the crown of my head.
+                                    I’ve gone to dermatologists several times the past year to get shots in the bald area to
+                                    stimulate
+                                    hair growth. It didn’t work.”</p>
+
+                                    <p class="testi_quote">Jared Rawlins</p>
+
+                                </div>
+                                <div class="bubble-below">
+                                    <img src="images/bubble_image_1.gif"/>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 ">
+                                <div class="bubble">
+
+
+                                    <div class="row-fluid">
+                                        <div class="col-xs-6">
+                                            <video id="vid1" src="" class="video-js vjs-default-skin" controls preload="auto"
+                                            width="100%" height="150"
+                                            data-setup='{ "techOrder": ["vimeo"], "src": "https://vimeo.com/63186969", "loop": true, "autoplay": false }'>
+                                            <p>Video Playback Not Supported</p>
+                                        </video>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <p class="testi_quote">Jared Rawlins <br/>
+                                            <small>San Diego, CA</small>
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="bubble-below">
+                                <img src="images/bubble_image_1.gif"/>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
-                <div class="bubble-below">
-                    <img src="images/bubble_image_1.gif"/>
-                </div>
-            </div>
-        </div>
+            </section>
 
-    </div>
-</section>
+            <section id="main">
+                <div class="container">
+                    <div class="col-md-12">
+                        <div class="col-md-6 title">
+                            <h1>Proven Results</h1>
+                            <div id="chart"></div>
+                        </div>
+                        <div class="col-md-6 texttop">
+                            <p>Mira Hair Oil (see “A” in chart) was tested against two other herbal formulations (B and C in chart) in a
+                                randomized double-blind placebo-controlled study to evaluate the effectiveness of hair oil in the management
+                                of hair loss.
+                            </p>
 
-<section id="main">
-<div class="container">
-<div class="col-md-12">
-    <div class="col-md-6 title">
-        <h1>Proven Results</h1>
-        <div id="chart"></div>
-    </div>
-    <div class="col-md-6 texttop">
-        <p>Mira Hair Oil (see “A” in chart) was tested against two other herbal formulations (B and C in chart) in a
-            randomized double-blind placebo-controlled study to evaluate the effectiveness of hair oil in the management
-            of hair loss.
-        </p>
+                            <p>The oils were tested on 192 adults, male and female who lost 60 hairs or more daily. Researchers measured
+                                hair density, elasticity, strength, and fragility.</p>
 
-        <p>The oils were tested on 192 adults, male and female who lost 60 hairs or more daily. Researchers measured
-            hair density, elasticity, strength, and fragility.</p>
+                                <p>As the chart shows, the Mira Hair Oil formulation significantly outperformed the other hair oils tested in
+                                    stimulating new hair growth. Specifically, those subjects using Mira Hair Oil experienced 58% new hair
+                                    growth after 8 weeks of use.</p>
 
-        <p>As the chart shows, the Mira Hair Oil formulation significantly outperformed the other hair oils tested in
-            stimulating new hair growth. Specifically, those subjects using Mira Hair Oil experienced 58% new hair
-            growth after 8 weeks of use.</p>
+                                    <p>Ffter 8 weeks of use, the Mira Hair Oil reduced hair loss by 75%, cut down on dandruff by 71%, alleviated
+                                        itching by 98%, and increased moisture 133%, which can give hair a shinier and more lustrous look.</p>
 
-        <p>Ffter 8 weeks of use, the Mira Hair Oil reduced hair loss by 75%, cut down on dandruff by 71%, alleviated
-            itching by 98%, and increased moisture 133%, which can give hair a shinier and more lustrous look.</p>
+                                    </div>
+                                </div>
 
-    </div>
-</div>
+                                <div class="col-md-12 title">
+                                    <h1>How Does Mira Hair Oil Work?</h1>
+                                </div>
 
-<div class="col-md-12 title">
-    <h1>How Does Mira Hair Oil Work?</h1>
-</div>
+                                <div class="col-md-12">
+                                    <div class="col-md-5 offset1 texttop">
+                                        <img src="images/miraoil.jpg">
+                                    </div>
+                                    <div class="col-md-6 texttop checklist">
+                                        <p class="textspace">Mira Hair oil seeps into your scalp, where it detoxifies the blood, exfoliates the pores of
+                                            your scalp, and stops DHT from being produced - thereby allowing fast hair growth. No other hair care
+                                            product does this safely, naturally, or as quickly. In fact - other well-know hair systems contain harmful
+                                            chemical drugs and toxins that give you temporary hair growth but at the cost of you later experiencing
+                                            chronic and permanent hair loss, together with a host of orther terrible side effects like birth defects,
+                                            itchy scalp, scalp irritations, and a loss of libido.
+                                        </p>
+                                       <!--  <a href="http://www.mcssl.com/SecureCart/AddItem.ashx?mid=6B082A34-C49F-4A79-89D9-515773F2D171&pid=1533ce4dfa5148f2aeca8af1945ed50f&bn=1"> -->
+                                            <button class="cta-main">
+                                                Get a 60 Day Supply ($79.99)<br/>
+                                                <span>Guaranteed Results or Your Money Back</span>
+                                            </button>
+                                        <!-- </a> -->
+                                    </div>
+                                </div>
+                                <br>
 
-<div class="col-md-12">
-    <div class="col-md-5 offset1 texttop">
-        <img src="images/miraoil.jpg">
-    </div>
-    <div class="col-md-6 texttop checklist">
-        <p class="textspace">Mira Hair oil seeps into your scalp, where it detoxifies the blood, exfoliates the pores of
-            your scalp, and stops DHT from being produced - thereby allowing fast hair growth. No other hair care
-            product does this safely, naturally, or as quickly. In fact - other well-know hair systems contain harmful
-            chemical drugs and toxins that give you temporary hair growth but at the cost of you later experiencing
-            chronic and permanent hair loss, together with a host of orther terrible side effects like birth defects,
-            itchy scalp, scalp irritations, and a loss of libido.
-        </p>
-        <button>
-            Get a 60 Day Supply ($79.99)<br/>
-            <span>Guaranteed Results or Your Money Back</span>
-        </button>
-    </div>
-</div>
-<br>
+                                <div class="col-md-12 lefttitle">
+                                    <h1>Grow Hair 2-3x More Quickly</h1>
+                                </div>
 
-<div class="col-md-12 lefttitle">
-    <h1>Grow Hair 2-3x More Quickly</h1>
-</div>
+                                <div class="col-md-12">
+                                    <div class="col-md-6"><!-- Before and after -->
+                                        <div class="before-and-after">
+                                            <div class="before left">
+                                                <p>Before</p>
+                                                <img src="images/before-and-after/kim-before.png" alt="Kim Before">
+                                            </div>
 
-<div class="col-md-12">
-    <div class="col-md-6"><!-- Before and after -->
-        <div class="before-and-after">
-            <div class="before left">
-                <p>Before</p>
-                <img src="images/before-and-after/kim-before.png" alt="Kim Before">
-            </div>
+                                            <div class="after left">
+                                                <p>After</p>
+                                                <img src="images/before-and-after/kim-after.png" alt="Kim After">
+                                            </div>
+                                        </div>
+                                        <div class="smalltitle">
+                                            <p>Get results like this in only 3 months!</p>
+                                        </div>
+                                    </div>
+                                    <!-- End before and after-->
+                                    <div class="col-md-6">
+                                        <p>At any one time, your hair is under 3 stages of growth - the <span class="bold">anagen</span>, <span
+                                            class="bold">catagen</span> and <span class="bold">telogen</span> phases. The anagen phase is where all
+                                            the growth of your hair takes place. If your hair is not growing as fast as you’d like, it means that a low
+                                            percentage of your hair is in the anagen phase. This can be caused by a few things:</p>
 
-            <div class="after left">
-                <p>After</p>
-                <img src="images/before-and-after/kim-after.png" alt="Kim After">
-            </div>
-        </div>
-        <div class="smalltitle">
-            <p>Get results like this in only 3 months!</p>
-        </div>
-    </div>
-    <!-- End before and after-->
-    <div class="col-md-6">
-        <p>At any one time, your hair is under 3 stages of growth - the <span class="bold">anagen</span>, <span
-                class="bold">catagen</span> and <span class="bold">telogen</span> phases. The anagen phase is where all
-            the growth of your hair takes place. If your hair is not growing as fast as you’d like, it means that a low
-            percentage of your hair is in the anagen phase. This can be caused by a few things:</p>
+                                            <ol>
+                                                <li> You may have too much DHT in your scalp. DHT is a male
+                                                    hormone that stops hair growth and causes hair loss by
+                                                    choking your hair follicles at the roots causing them to
+                                                    eventually fall out.
+                                                </li>
 
-        <ol>
-            <li> You may have too much DHT in your scalp. DHT is a male
-                hormone that stops hair growth and causes hair loss by
-                choking your hair follicles at the roots causing them to
-                eventually fall out.
-            </li>
+                                                <li> You don’t have the right circulation of blood to feed your
+                                                    growing hair follicles.
+                                                </li>
+                                                <li> Your hair follicles are being plugged and clogged at the
+                                                    surface.
+                                                </li>
+                                                <li> You may lack a protein called VEGF, which is a protein
+                                                    whose job is to grow healthy, thick hair.
+                                                </li>
+                                            </ol>
 
-            <li> You don’t have the right circulation of blood to feed your
-                growing hair follicles.
-            </li>
-            <li> Your hair follicles are being plugged and clogged at the
-                surface.
-            </li>
-            <li> You may lack a protein called VEGF, which is a protein
-                whose job is to grow healthy, thick hair.
-            </li>
-        </ol>
+                                            <p>Mira Hair Oil provides your hair with minerals and oils that cure these 4 issues, and increases the
+                                                percentage of hair that is in the anagen phase, causing the hair to start growing at a much faster rate</p>
+                                            </div>
+                                        </div>
 
-        <p>Mira Hair Oil provides your hair with minerals and oils that cure these 4 issues, and increases the
-            percentage of hair that is in the anagen phase, causing the hair to start growing at a much faster rate</p>
-    </div>
-</div>
+                                        <div class="col-md-12 lefttitle">
+                                            <h1>Significantly Reduce Frizz</h1>
+                                        </div>
 
-<div class="col-md-12 lefttitle">
-    <h1>Significantly Reduce Frizz</h1>
-</div>
+                                        <div class="col-md-12">
+                                            <div class="col-md-5">
+                                                <img src="images/frizz.jpg" alt="frizz image">
+                                            </div>
+                                            <div class="col-md-7">
+                                                <p class="textspace">Frizzy hair is almost always caused by dry, unmoisturized hair as well as a depletion in
+                                                    natural oils.</p>
 
-<div class="col-md-12">
-    <div class="col-md-5">
-        <img src="images/frizz.jpg" alt="frizz image">
-    </div>
-    <div class="col-md-7">
-        <p class="textspace">Frizzy hair is almost always caused by dry, unmoisturized hair as well as a depletion in
-            natural oils.</p>
+                                                    <p class="textspace">Mira Hair Oil contains phytochemicals (checmicals that occur naturally in plants) that seep
+                                                        into your scalp, exfoliating your hair and increasing the moisturization of your hair. Because we use
+                                                        natural ingredients, you can use Mira Hair Oil every day without damaging your hair.</p>
+                                                    </div>
+                                                </div>
 
-        <p class="textspace">Mira Hair Oil contains phytochemicals (checmicals that occur naturally in plants) that seep
-            into your scalp, exfoliating your hair and increasing the moisturization of your hair. Because we use
-            natural ingredients, you can use Mira Hair Oil every day without damaging your hair.</p>
-    </div>
-</div>
+                                                <div class="col-md-12 lefttitle">
+                                                    <h1>Promotes Thick, Natural Hair</h1>
+                                                </div>
 
-<div class="col-md-12 lefttitle">
-    <h1>Promotes Thick, Natural Hair</h1>
-</div>
+                                                <div class="col-md-12">
+                                                    <div class="col-md-6">
+                                                        <img src="images/natural_hair.jpg" alt="frizz image">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <p class="textspace" styke="font-size: 17px;line-height: 32px;padding-top: 22px;">Thick hair is achieved through cell division. Many studies on the hormone VEGF and the herb
+                                                            Asia sari radix have shown that it is indeed possible to achieve thicker hair, and faster growth through
+                                                            more cell division; further studies show that you can also increase the thickness of the hair follicle. Cell
+                                                            division is accomplished at the cellular level, and the only way to do this effectively is topically, and
+                                                            that is why you need to use an oil like Mira hair oil. It contains herbs like Asia sari radix that will
+                                                            cause cell division. </p>
+                                                        </div>
+                                                    </div>
 
-<div class="col-md-12">
-    <div class="col-md-6">
-        <img src="images/natural_hair.jpg" alt="frizz image">
-    </div>
-    <div class="col-md-6">
-        <p class="textspace">Thick hair is achieved through cell division. Many studies on the hormone VEGF and the herb
-            Asia sari radix have shown that it is indeed possible to achieve thicker hair, and faster growth through
-            more cell division; further studies show that you can also increase the thickness of the hair follicle. Cell
-            division is accomplished at the cellular level, and the only way to do this effectively is topically, and
-            that is why you need to use an oil like Mira hair oil. It contains herbs like Asia sari radix that will
-            cause cell division. </p>
-    </div>
-</div>
+                                                    <div class="col-md-12 title">
+                                                        <h1>What’s in Mira Hair Oil?</h1>
+                                                    </div>
 
-<div class="col-md-12 title">
-    <h1>What’s in Mira Hair Oil?</h1>
-</div>
+                                                    <div class="col-md-12 miracheck">
+                                                        <div class="col-md-6">
+                                                            <ul>
+                                                                <li><span class="bold">Octimum oil</span>: This natural oil has been shown to promote follicular
+                                                                    proliferation and enhance normal hair growth. In the laboratory, octimum has regrown lost hair in
+                                                                    cancer-induced rats.
+                                                                </li>
+                                                                <br>
 
-<div class="col-md-12 miracheck">
-    <div class="col-md-6">
-        <ul>
-            <li><span class="bold">Octimum oil</span>: This natural oil has been shown to promote follicular
-                proliferation and enhance normal hair growth. In the laboratory, octimum has regrown lost hair in
-                cancer-induced rats.
-            </li>
-            <br>
+                                                                <li><span class="bold">Citrullus colocynthis</span>: In an animal study published in Natural Product
+                                                                    Research, a petroleum ether extract of Citrullus colocynthis was shown to promote growth of hair
+                                                                    follicles just as effectively as the FDA-approved drug Finasteride, only without the side effects.
+                                                                </li>
+                                                                <br>
 
-            <li><span class="bold">Citrullus colocynthis</span>: In an animal study published in Natural Product
-                Research, a petroleum ether extract of Citrullus colocynthis was shown to promote growth of hair
-                follicles just as effectively as the FDA-approved drug Finasteride, only without the side effects.
-            </li>
-            <br>
-
-            <li><span class="bold">Cuscutareflexa</span>: Inhibition of 5alpha-reductase activity by petroleum ether
-                extract of Cuscutareflexa suggests that it may reverse androgen-induced alopecia by preventing
-                conversion of testosterone to dihydrotestosterone (DHT) – a hormone that causes hair loss.
-            </li>
-            <br>
+                                                                <li><span class="bold">Cuscutareflexa</span>: Inhibition of 5alpha-reductase activity by petroleum ether
+                                                                    extract of Cuscutareflexa suggests that it may reverse androgen-induced alopecia by preventing
+                                                                    conversion of testosterone to dihydrotestosterone (DHT) – a hormone that causes hair loss.
+                                                                </li>
+                                                                <br>
 
 
-            <li><span class="bold">Eclipta Alba</span> : Also known as Bhringraj (which translates to “king of hair”),
-                this plant was demonstrated in a study published in the Journal of Ethnopharmacology to grow hair in lab
-                mice. It can strengthen hair roots, control hair thinning, and prevent premature graying and alopecia.
-            </li>
-            <br>
-        </ul>
-    </div>
+                                                                <li><span class="bold">Eclipta Alba</span> : Also known as Bhringraj (which translates to “king of hair”),
+                                                                    this plant was demonstrated in a study published in the Journal of Ethnopharmacology to grow hair in lab
+                                                                    mice. It can strengthen hair roots, control hair thinning, and prevent premature graying and alopecia.
+                                                                </li>
+                                                                <br>
+                                                            </ul>
+                                                        </div>
 
-    <div class="col-md-6">
-        <ul>
-            <li><span class="bold">Ginkgo biloba</span> : Rich in antioxidants, ginkgo biloba increases blood flow to
-                the hair follicles in the scalp, strengthening and stimulating the hair shaft. Promotes the anagen hair
-                growth stage.
-            </li>
-            <br>
+                                                        <div class="col-md-6">
+                                                            <ul>
+                                                                <li><span class="bold">Ginkgo biloba</span> : Rich in antioxidants, ginkgo biloba increases blood flow to
+                                                                    the hair follicles in the scalp, strengthening and stimulating the hair shaft. Promotes the anagen hair
+                                                                    growth stage.
+                                                                </li>
+                                                                <br>
 
-            <li><span class="bold">Hibiscus</span> : contains calcium, phosphorus, iron, vitamin C, vitamin B1, and
-                riboflavin; these stimulate thicker hair growth and prevent premature graying. This plant extract boosts
-                hair growth 6% faster than minoxidil -- with no side effects.
-            </li>
-            <br>
+                                                                <li><span class="bold">Hibiscus</span> : contains calcium, phosphorus, iron, vitamin C, vitamin B1, and
+                                                                    riboflavin; these stimulate thicker hair growth and prevent premature graying. This plant extract boosts
+                                                                    hair growth 6% faster than minoxidil -- with no side effects.
+                                                                </li>
+                                                                <br>
 
-            <li><span class="bold">Trigonella</span> : In a 7.5% concentration, trigonella shows excellent hair growth
-                activity when compared with a 2% minoxidil ethanolic solution. A study published in Pharmacognosy
-                Journal found that an herbal formulation including trigonella “showed significant reduction in hair
-                growth initiation time.”
-            </li>
-            <br>
+                                                                <li><span class="bold">Trigonella</span> : In a 7.5% concentration, trigonella shows excellent hair growth
+                                                                    activity when compared with a 2% minoxidil ethanolic solution. A study published in Pharmacognosy
+                                                                    Journal found that an herbal formulation including trigonella “showed significant reduction in hair
+                                                                    growth initiation time.”
+                                                                </li>
+                                                                <br>
 
-            <li><span class="bold">Asiasari Radix</span> : A study with lab mice published in the Journal of
-                Dermatological Science showed that Asiasari Radix was the most potent plant for stimulating hair growth,
-                increasing protein synthesis within hair follicles. Asiasari Radix works by boosting VEGF, a protein
-                that controls hair growth and follicle size.
-            </li>
-            <br>
-        </ul>
-    </div>
-</div>
+                                                                <li><span class="bold">Asiasari Radix</span> : A study with lab mice published in the Journal of
+                                                                    Dermatological Science showed that Asiasari Radix was the most potent plant for stimulating hair growth,
+                                                                    increasing protein synthesis within hair follicles. Asiasari Radix works by boosting VEGF, a protein
+                                                                    that controls hair growth and follicle size.
+                                                                </li>
+                                                                <br>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
 
-<div class="col-md-12 title">
-    <h1>Get Thicker, Longer Hair</h1>
-</div>
+                                                    <div class="col-md-12 title">
+                                                        <h1>Get Thicker, Longer Hair</h1>
+                                                    </div>
 
-<div class="col-md-12">
-    <div class="col-md-6 title">
-        <h2>Buy Mira Hair Oil Today!</h2>
+                                                    <div class="col-md-12">
+                                                        <div class="col-md-6 title">
+                                                            <h2>Buy Mira Hair Oil Today!</h2>
 
-        <p class="codered">Today only: Use code 23XV for 20% off!</p>
-    </div>
-    <div class="col-md-6 checklist">
-        <button>
-            Get a 60 Day Supply ($79.99)<br/>
-            <span>Guaranteed Results or Your Money Back</span>
-        </button>
-        <p class="notice">Secure Checkout. We'll never share your information.</p>
+                                                            <p class="codered">Today only: Use code 23XV for 20% off!</p>
+                                                        </div>
+                                                        <div class="col-md-6 checklist">
+                                                       <!--  <a href="http://www.mcssl.com/SecureCart/AddItem.ashx?mid=6B082A34-C49F-4A79-89D9-515773F2D171&pid=1533ce4dfa5148f2aeca8af1945ed50f&bn=1"> -->
+                                                            <button class="cta-main">
+                                                                Get a 60 Day Supply ($79.99)<br/>
+                                                                <span>Guaranteed Results or Your Money Back</span>
+                                                            </button>
+                                                        <!-- </a> -->
+                                                            <p class="notice">Secure Checkout. We'll never share your information.</p>
 
-        <div class="row">
-            <div class="col-md-4">
-                <img src="images/mcafee.jpg" alt="mcafee secure">
-            </div>
-            <div class="col-md-4">
-                <img src="images/truste.jpg" alt="Truste">
-            </div>
-            <div class="col-md-4">
-                <img src="images/verisign.jpg" alt="Verisign">
-            </div>
-        </div>
-    </div>
-</div>
+                                                            <div class="row">
+                                                                <div class="col-md-4">
+                                                                    <img src="images/mcafee.jpg" alt="mcafee secure">
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <img src="images/truste.jpg" alt="Truste">
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <img src="images/verisign.jpg" alt="Verisign">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
 
-<div class="col-md-12 title">
-    <h1>Customer Testimonials</h1>
-</div>
+                                                    <div class="col-md-12 title">
+                                                        <h1>Customer Testimonials</h1>
+                                                    </div>
 
-<div class="col-md-12 custtest">
-    <p>
-        <span class="bold">“Half an inch of hair growth monthly”</span> <br>
-        “I purchased the Mira Hair Oil because I have brittle bleached blonde hair that was breaking off at the touch,”
-        writes Stephanie White, Wasilla, AK. “With the use of Mira Hair Oil every other day, it has made my hair
-        stronger, shinier, and silkier to the touch. Mira Hair Oil has restored my natural wave and body. This oil has
-        helped me feel better about myself and my hair. I feel less insecure about leaving the house now since using the
-        Mira Hair Oil. This is a natural product designed to add life and luster to hair that is over-processed; it has
-        helped my scalp heal from the harsh bleaching process. With daily massaging to the scalp, Mira Hair Oil has
-        stimulated my hair follicles to grow. I was averaging ¼ of an inch hair growth each month. Now, after using Mira
-        Hair Oil, I am at half an inch each month. That is double the growth.</p>
+                                                    <div class="col-md-12 custtest">
+                                                        <p>
+                                                            <span class="bold">“Half an inch of hair growth monthly”</span> <br>
+                                                            “I purchased the Mira Hair Oil because I have brittle bleached blonde hair that was breaking off at the touch,”
+                                                            writes Stephanie White, Wasilla, AK. “With the use of Mira Hair Oil every other day, it has made my hair
+                                                            stronger, shinier, and silkier to the touch. Mira Hair Oil has restored my natural wave and body. This oil has
+                                                            helped me feel better about myself and my hair. I feel less insecure about leaving the house now since using the
+                                                            Mira Hair Oil. This is a natural product designed to add life and luster to hair that is over-processed; it has
+                                                            helped my scalp heal from the harsh bleaching process. With daily massaging to the scalp, Mira Hair Oil has
+                                                            stimulated my hair follicles to grow. I was averaging ¼ of an inch hair growth each month. Now, after using Mira
+                                                            Hair Oil, I am at half an inch each month. That is double the growth.
+                                                        </p>
 
-    <p>
-        <span class="bold">“All my hair problems stopped”</span> <br>
-        “Mira Hair Oil is really amazing,” writes Rosie King, Encino, CA. “From the very first time I started using it,
-        my hair texture changed; it is very soft, manageable, and my curls are beautifully defined. I have used it 2 to
-        3 times a week for the past 4 months and all my hair problems stopped. My scalp is very clean and healthy, and
-        there is a lot of baby hair.</p>
+                                                        <p>
+                                                            <span class="bold">“All my hair problems stopped”</span> <br>
+                                                            “Mira Hair Oil is really amazing,” writes Rosie King, Encino, CA. “From the very first time I started using it,
+                                                            my hair texture changed; it is very soft, manageable, and my curls are beautifully defined. I have used it 2 to
+                                                            3 times a week for the past 4 months and all my hair problems stopped. My scalp is very clean and healthy, and
+                                                            there is a lot of baby hair.
+                                                        </p>
 
-    <p>
-        <span class="bold">“Hair growth in a month”</span> <br>
-        “I was desperate for something that was going to make my hair long, thick, and healthy,” says Melanie Mitchell.
-        “I started using Mira Hair Oil every other night, rubbing it into my hair, massaging the scalp for 10 minutes
-        before bed. I’ve only been using Mira Hair Oil for a month but I’ve already seen hair growth. I used to have dry
-        hair and a dry scalp, and since using Mira Hair Oil my hair has been soft and shiny, and also my scalp has been
-        dandruff and itch-free.”</p>
+                                                        <p>
+                                                            <span class="bold">“Hair growth in a month”</span> <br>
+                                                            “I was desperate for something that was going to make my hair long, thick, and healthy,” says Melanie Mitchell.
+                                                            “I started using Mira Hair Oil every other night, rubbing it into my hair, massaging the scalp for 10 minutes
+                                                            before bed. I’ve only been using Mira Hair Oil for a month but I’ve already seen hair growth. I used to have dry
+                                                            hair and a dry scalp, and since using Mira Hair Oil my hair has been soft and shiny, and also my scalp has been
+                                                            dandruff and itch-free.”
+                                                        </p>
 
-    <p>
-        <span class="bold">“My hair stopped falling out”</span> <br>
-        “I have had serious hair loss for about 3 years, and have spent lots of money on products that have been no
-        good,” explains Lladira Garcia, Crescent City, FL. “Then I purchased Mira Hair Oil and was happy for the first
-        time. Within 2 weeks, my hair stopped falling out, and I was overjoyed to see that there was no hair left on the
-        brush. Now I have long nails, nice skin, thick hair, and I feel great!”</p>
+                                                        <p>
+                                                            <span class="bold">“My hair stopped falling out”</span> <br>
+                                                            “I have had serious hair loss for about 3 years, and have spent lots of money on products that have been no
+                                                            good,” explains Lladira Garcia, Crescent City, FL. “Then I purchased Mira Hair Oil and was happy for the first
+                                                            time. Within 2 weeks, my hair stopped falling out, and I was overjoyed to see that there was no hair left on the
+                                                            brush. Now I have long nails, nice skin, thick hair, and I feel great!”
+                                                        </p>
 
-    <p>
-        <span class="bold">“Put almost 3 inches of hair on my head”</span> <br>
-        “A few months ago, my hair started to fall out and refused to grow. I was so scared that when I saw your ad, I
-        jumped on the offer. After all, with your money-back guarantee, I had nothing to lose. In just 3 months using
-        Mira Hair Oil, I have put over 2.8 inches of hair on my head. My hair is long and heavy, and has stopped
-        prematurely graying. I don’t know what I would have done without Mira Oil,” says Brenda Willis Leigh Acres FL
-        “New growth in thinning areas” - Linda Truesdale, Huntersville, NC.</p>
+                                                        <p>
+                                                            <span class="bold">“Put almost 3 inches of hair on my head”</span> <br>
+                                                            “A few months ago, my hair started to fall out and refused to grow. I was so scared that when I saw your ad, I
+                                                            jumped on the offer. After all, with your money-back guarantee, I had nothing to lose. In just 3 months using
+                                                            Mira Hair Oil, I have put over 2.8 inches of hair on my head. My hair is long and heavy, and has stopped
+                                                            prematurely graying. I don’t know what I would have done without Mira Oil,” says Brenda Willis Leigh Acres FL
+                                                            “New growth in thinning areas” - Linda Truesdale, Huntersville, NC.
+                                                        </p>
 
-    <p>
-        <span class="bold">“My hair not falling out any more”</span> <br>
-        “I have been using Mira Hair Oil for a month now, and what a big difference it has made,” raves Gwen. “My hair
-        is so soft and shiny. It is also much more manageable and healthy looking. My hair has grown one inch and has
-        not fallen out any more. Mira Hair Oil has given me hair that I’m happy with!”</p>
+                                                        <p>
+                                                            <span class="bold">“My hair not falling out any more”</span> <br>
+                                                            “I have been using Mira Hair Oil for a month now, and what a big difference it has made,” raves Gwen. “My hair
+                                                            is so soft and shiny. It is also much more manageable and healthy looking. My hair has grown one inch and has
+                                                            not fallen out any more. Mira Hair Oil has given me hair that I’m happy with!”
+                                                        </p>
 
-    <p>
-        <span class="bold">“1.5 inches of new growth in 4 weeks”</span> <br>
-        Christine from the UK says, “After using Mira Hair Oil, I can grow my hair to a reasonable length in a
-        relatively short time, because it is looking longer than it ever did during a period of one month’s growth. I
-        estimate a growth rate for new hair of about 1 to 1.5 inches over the past 4 weeks.”</p>
+                                                        <p>
+                                                            <span class="bold">“1.5 inches of new growth in 4 weeks”</span> <br>
+                                                            Christine from the UK says, “After using Mira Hair Oil, I can grow my hair to a reasonable length in a
+                                                            relatively short time, because it is looking longer than it ever did during a period of one month’s growth. I
+                                                            estimate a growth rate for new hair of about 1 to 1.5 inches over the past 4 weeks.”
+                                                        </p>
 
-    <p>
-        <span class="bold">“Hair fuller and thicker”</span> <br>
-        “I got my mom to start using Mira Hair Oil as she has thin hair, and she can already see the results with just 2
-        months of use,” says Ross Lives. “Her hair is fuller and thicker and she notices fewer split ends. It even makes
-        the hair shine more than ever.”</p>
+                                                        <p>
+                                                            <span class="bold">“Hair fuller and thicker”</span> <br>
+                                                            “I got my mom to start using Mira Hair Oil as she has thin hair, and she can already see the results with just 2
+                                                            months of use,” says Ross Lives. “Her hair is fuller and thicker and she notices fewer split ends. It even makes
+                                                            the hair shine more than ever.”
+                                                        </p>
 
-    <p>
-        <span class="bold">“Grew 1.5 inches in 2 weeks”</span> <br>
-        “I bought Mira Hair Oil because I needed for my hair to grow healthy and to stop gray hair,” says Melissa
-        Dotson. “After 2 weeks, my hair grew 1.5 inches. I could not believe it!”</p>
+                                                        <p>
+                                                            <span class="bold">“Grew 1.5 inches in 2 weeks”</span> <br>
+                                                            “I bought Mira Hair Oil because I needed for my hair to grow healthy and to stop gray hair,” says Melissa
+                                                            Dotson. “After 2 weeks, my hair grew 1.5 inches. I could not believe it!”
+                                                        </p>
 
-    <p>
-        <span class="bold">“I love my hair again”</span> <br>
-        Chris Blake writes: “I have used both the Mira Hair Oil and the Mira Shampoo 4 times now and I swear I’ll never
-        use another product on my hair. My hair has that youthful sheen again. It is beautiful. I love my hair again. I
-        was even called ‘Hot Momma’ by some stranger at the store.”</p>
+                                                        <p>
+                                                            <span class="bold">“I love my hair again”</span> <br>
+                                                            Chris Blake writes: “I have used both the Mira Hair Oil and the Mira Shampoo 4 times now and I swear I’ll never
+                                                            use another product on my hair. My hair has that youthful sheen again. It is beautiful. I love my hair again. I
+                                                            was even called ‘Hot Momma’ by some stranger at the store.”
+                                                        </p>
 
-    <p>We have hundreds more testimonials from satisfied Mira Hair Oil users like Stephanie, Helen, Gwen, and Rosie on
-        file at our offices. If you are ever in the neighborhood, we invite you to drop on by – we’ll set you up in a
-        comfy chair with a cup of coffee, give you a fat stack of testimonial letters and e-mails, and let you see for
-        yourself that they’re 100% real. We love getting visits from fellow professional stylists like you!</p>
+                                                        <p>We have hundreds more testimonials from satisfied Mira Hair Oil users like Stephanie, Helen, Gwen, and Rosie on
+                                                            file at our offices. If you are ever in the neighborhood, we invite you to drop on by – we’ll set you up in a
+                                                            comfy chair with a cup of coffee, give you a fat stack of testimonial letters and e-mails, and let you see for
+                                                            yourself that they’re 100% real. We love getting visits from fellow professional stylists like you!
+                                                        </p>
 
-    <p>
-        <span class="bold">“2 inches of new growth”</span> <br>
-        “I have been using your Mira Hair Oil for over 2 months now and my hair is in the best health it has been since
-        I was a teenager,” writes Sharlyn Rakes, Aurora, CO. “I have always had very fine blonde naturally curly hair
-        that would consistently break off at the ends and seemed never to grow past my shoulders. After using Mira Hair
-        Oil, my hair has grown at least 2 inches already. The new growth is much stronger, thicker, and has more shine
-        than ever. I have also noticed that the new growth has no gray!”</p>
+                                                        <p>
+                                                            <span class="bold">“2 inches of new growth”</span> <br>
+                                                            “I have been using your Mira Hair Oil for over 2 months now and my hair is in the best health it has been since
+                                                            I was a teenager,” writes Sharlyn Rakes, Aurora, CO. “I have always had very fine blonde naturally curly hair
+                                                            that would consistently break off at the ends and seemed never to grow past my shoulders. After using Mira Hair
+                                                            Oil, my hair has grown at least 2 inches already. The new growth is much stronger, thicker, and has more shine
+                                                            than ever. I have also noticed that the new growth has no gray!”
+                                                        </p>
 
-    <p>
-        <span class="bold">“Even Harvard couldn’t help me”</span> <br>
-        Kerri Chewning says, “I could not wash my hair without noticing a dramatic hair loss. I visited a Harvard
-        Medical School licensed dermatologist who could do nothing to help me. When I discovered Mira Hair Oil, I used
-        the treatment as prescribed and witnessed a noticeable decrease in hair loss after 2-4 weeks. I also noticed
-        baby hair wisps around my forehead, where
-        hair had previously receded or fallen out entirely. And the hair I had thickened.”</p>
+                                                        <p>
+                                                            <span class="bold">“Even Harvard couldn’t help me”</span> <br>
+                                                            Kerri Chewning says, “I could not wash my hair without noticing a dramatic hair loss. I visited a Harvard
+                                                            Medical School licensed dermatologist who could do nothing to help me. When I discovered Mira Hair Oil, I used
+                                                            the treatment as prescribed and witnessed a noticeable decrease in hair loss after 2-4 weeks. I also noticed
+                                                            baby hair wisps around my forehead, where
+                                                            hair had previously receded or fallen out entirely. And the hair I had thickened.”
+                                                        </p>
 
-    <p>
-        <span class="bold">“Doubled in thickness”</span> <br>
-        Haelli raves: “I finally have hair now – and a lot of it. My hair has doubled in thickness and has been growing
-        fast since I started to use Mira Hair Oil. Even the patches of loss have started to appear after being
-        stubborn.”</p>
+                                                        <p>
+                                                            <span class="bold">“Doubled in thickness”</span> <br>
+                                                            Haelli raves: “I finally have hair now – and a lot of it. My hair has doubled in thickness and has been growing
+                                                            fast since I started to use Mira Hair Oil. Even the patches of loss have started to appear after being
+                                                            stubborn.”
+                                                        </p>
 
-    <p>
-        <span class="bold">“Hair grows faster”</span> <br>
+                                                        <p>
+                                                            <span class="bold">“Hair grows faster”</span> <br>
 
-        “Mira Hair Oil will change your hair,” raves Rebecca Wheeler, Darwin, Australia. “It will become super shiny,
-        bouncy, and thick. Your color will be brighter, your hair will be easier to manage, and it will grow faster.
-        Mira Hair Oil does everything it promises! I will never be without it.”</p>
+                                                            “Mira Hair Oil will change your hair,” raves Rebecca Wheeler, Darwin, Australia. “It will become super shiny,
+                                                            bouncy, and thick. Your color will be brighter, your hair will be easier to manage, and it will grow faster.
+                                                            Mira Hair Oil does everything it promises! I will never be without it.”
+                                                        </p>
 
-</div>
+                                                    </div>
 
-<div class="col-md-12 title">
-    <h1>Get Thicker, Longer Hair</h1>
-</div>
+                                                   
+                                                   
 
-<div class="col-md-12">
-    <div class="col-md-6 title">
-        <h2>Buy Mira Hair Oil Today!</h2>
+                                                    <div class="col-md-12 lefttitle">
+                                                        <h1>Created by a PhD</h1>
+                                                    </div>
 
-        <p class="codered">Today only: Use code 23XV for 20% off!</p>
-    </div>
-    <div class="col-md-6 checklist">
-        <button>
-            Get a 60 Day Supply ($79.99)<br/>
-            <span>Guaranteed Results or Your Money Back</span>
-        </button>
+                                                    <div class="col-md-12">
+                                                        <div class="col-md-6">
+                                                            <img src="images/doctor.jpg">
 
-        <p class="notice">Secure Checkout. We'll never share your information.</p>
+                                                            <p>Dr. Biswajit Mukerjee, M.D</p>
+                                                        </div>
+                                                        <div class="col-md-6 textspace">
+                                                            <p style="font-size:20px;line-height:40px;">Miral Hair Oil was developed in collaboration with Dr. Biswajit Mukerjee, who holds a PhD in Pharmacology, which
+                                                                makes him a perfect fit for designing a product for improving the health of hair. His skills and knowledge
+                                                                has allowed us to creat an extremely effective product that uses no harmful ingredients.</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12 title">
+                                                            <h1>Get Thicker, Longer Hair</h1>
+                                                        </div>
 
-        <div class="row">
-            <div class="col-md-4">
-                <img src="images/mcafee.jpg" alt="mcafee secure">
-            </div>
-            <div class="col-md-4">
-                <img src="images/truste.jpg" alt="Truste">
-            </div>
-            <div class="col-md-4">
-                <img src="images/verisign.jpg" alt="Verisign">
-            </div>
-        </div>
-    </div>
-</div>
+                                                        <div class="col-md-12" style="margin-bottom:80px;">
+                                                            <div class="col-md-6 title">
+                                                                <h2>Buy Mira Hair Oil Today!</h2>
 
-<div class="col-md-12 lefttitle">
-    <h1>Created by a PhD</h1>
-</div>
+                                                                <p class="codered">Today only: Use code 23XV for 20% off!</p>
+                                                            </div>
+                                                            <div class="col-md-6 checklist">
+                                                           <!--  <a href="http://www.mcssl.com/SecureCart/AddItem.ashx?mid=6B082A34-C49F-4A79-89D9-515773F2D171&pid=1533ce4dfa5148f2aeca8af1945ed50f&bn=1"> -->
+                                                                <button class="cta-main">
+                                                                    Get a 60 Day Supply ($79.99)<br/>
+                                                                    <span>Guaranteed Results or Your Money Back</span>
+                                                                </button>
+                                                            <!-- </a> -->
 
-<div class="col-md-12">
-    <div class="col-md-6">
-        <img src="images/doctor.jpg">
+                                                                <p class="notice">Secure Checkout. We'll never share your information.</p>
 
-        <p>Dr. [Name of Doctor], M.D</p>
-    </div>
-    <div class="col-md-6 textspace">
-        <p>Miral Hair Oil was developed in collaboration with [name of doctor], who holds a PhD in Pharmacology, which
-            makes him a perfect fit for designing a product for improving the health of hair. His skills and knowledge
-            has allowed us to creat an extremely effective product that uses no harmful ingredients.</p>
-    </div>
-</div>
+                                                                <div class="row">
+                                                                    <div class="col-md-4">
+                                                                        <img src="images/mcafee.jpg" alt="mcafee secure">
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <img src="images/truste.jpg" alt="Truste">
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <img src="images/verisign.jpg" alt="Verisign">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
 
-</div>
+                                                </section>
 
-</section>
+                                                <footer id="footer">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <p class="left">
+                                                            copyright Mira Herbals, LLC
+                                                            |
+                                                            <a href="privacy.html">Privacy Policy</a>
+                                                            |
+                                                            <a href="terms.html">Terms &amp; Conditions</a>
+                                                            </p>
 
-<footer id="footer">
-    <div class="container">
-        <div class="row">
-            <p class="left">copyright Mira Herbals, LLC</p>
+                                                            <div class="right">
+                                                                <img src="images/twitter.png">
+                                                                <img src="images/pinterest.png">
+                                                                <img src="images/facebook.png">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    </footer>
+                                                    <!-- Google Analytics: change UA-XXXXX-X to be your sites ID. -->
+                                                    <script>
+                                                        (function (b, o, i, l, e, r) {
+                                                            b.GoogleAnalyticsObject = l;
+                                                            b[l] || (b[l] =
+                                                                function () {
+                                                                    (b[l].q = b[l].q || []).push(arguments)
+                                                                });
+                                                            b[l].l = +new Date;
+                                                            e = o.createElement(i);
+                                                            r = o.getElementsByTagName(i)[0];
+                                                            e.src = '//www.google-analytics.com/analytics.js';
+                                                            r.parentNode.insertBefore(e, r)
+                                                        }(window, document, 'script', 'ga'));
+ga('create', 'UA-XXXXX-X');
+ga('send', 'pageview');
 
-            <div class="right">
-                <img src="images/twitter.png">
-                <img src="images/pinterest.png">
-                <img src="images/facebook.png">
-            </div>
-        </div>
-    </div>
-</footer
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-<script>
-    (function (b, o, i, l, e, r) {
-        b.GoogleAnalyticsObject = l;
-        b[l] || (b[l] =
-                function () {
-                    (b[l].q = b[l].q || []).push(arguments)
-                });
-        b[l].l = +new Date;
-        e = o.createElement(i);
-        r = o.getElementsByTagName(i)[0];
-        e.src = '//www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e, r)
-    }(window, document, 'script', 'ga'));
-    ga('create', 'UA-XXXXX-X');
-    ga('send', 'pageview');
+  
 </script>
 
 
@@ -639,104 +710,58 @@
 <script src="bower_components/bootstrap/js/collapse.js"></script>
 <script src="bower_components/bootstrap/js/tab.js"></script>
 <!-- endbuild -->
-<div class="wizard" id="coWizard" data-title="Checkout">
-    <div class="wizard-card card1" data-cardname="Cart details">
-        <h3>Cart</h3>
-        <table class="table-striped table table-hover items">
-            <thead>
-            <tr>
-                <th>Item</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Total</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td><img src="http://localhost:63342/hair_thing/app/images/miraoil.jpg" width="32" height="32" class="img-thumbnail"></td>
-                <td>Mira Hair Oil</td>
-                <td><span class="price" data-price="79.99">$79.99</span></td>
-                <td><input class="quantity" type="number" min="1" step="1" value="1"></td>
-                <td><span class="total">$79.99</span></td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
 
-    <div class="wizard-card" data-cardname="Shipping information">
-        <h3>Shipping information</h3>
-        <p>Lorem ipsum dolor sit amet consequetur it.</p>
-        <form class="form-horizontal">
-            <fieldset>
-                <p><input type="text" placeholder="Address Line 1"></p>
-                <p><input type="text" placeholder="Address Line 2"></p>
-                <p><input type="text" placeholder="Country"> <input type="text" placeholder="Zip code"></p>
-                <p><input type="text" placeholder="Phone number"></p>
-                <p><textarea placeholder="Comments..."></textarea></p>
-            </fieldset>
-        </form>
-    </div>
-
-    <div class="wizard-card" data-cardname="Payment">
-        <h3>Payment</h3>
-        <p>Redirecting to <img src="images/paypal.png" style="width:50px; vertical-align: middle;"></p>
-        <div id="spinner"></div>
-    </div>
-
-    <div class="wizard-card" data-cardname="Thank you">
-        <h3>Thank you! </h3>
-        <p>For shopping with us. <a id="close">Close</a></p>
-
-    </div>
-</div>
 <script type="text/javascript">
     (function($) {
-        var options = {
-            keyboard : false,
-            contentHeight : 400,
-            contentWidth : 700,
-            backdrop: 'static'
-        };
-        var wizard = $("#coWizard").wizard(options);
+        var handler = StripeCheckout.configure({
+          key: 'pk_test_HTuEvGleNxrYnGZBByjk3Pps',
+          image: 'images/bottle-square.jpg',
+          shippingAddress: true,
+          token: function(token, args) {
+            // Use the token to create the charge with a server-side script.
+            // You can access the token ID with `token.id`
+            window.stripe_args = args;
+            console.log(args);
+            window.token = token;
 
-        $('button').on('click', function() {
-            wizard.show();
+            var form = $('<form></form>');
+             $(form).hide().attr('method','post').attr('action',"thanks.php");
+             thanks_data = {
+                stripe_token: token.id,
+                order_id: token.created,
+                first_name: args.billing_name.split(" ")[0],
+                last_name: args.billing_name.split(" ")[1],
+                billing_address: args.billing_address_line1,
+                billing_city: args.billing_address_city,
+                billing_state: args.billing_address_state,
+                billing_zip: args.billing_address_zip,
+                shipping_address: args.shipping_address_line1,
+                shipping_city: args.shipping_address_city,
+                shipping_state: args.shipping_address_state,
+                shipping_zip: args.shipping_address_zip,
+                card_type: token.card.type,
+                card_number: token.card.last4,
+                email: token.email,
+                total: 79.99
+             }
+             for (i in thanks_data)
+             {
+               var input = $('<input type="hidden" />').attr('name',i).val(thanks_data[i]);
+               $(form).append(input);
+             }
+             $(form).appendTo('body').submit();
+          }
         });
 
-        function updateQuantity() {
-            var price = 79.99,
-                quantity = +$(this).val();
-
-            $('#coWizard').find('.card1 span.total').text( '$' + parseFloat(price*quantity).toFixed(2) );
-        }
-
-        $('#coWizard .card1 input[type="number"].quantity').change(updateQuantity);
-
-        var opts = {
-            lines: 7, // The number of lines to draw
-            length: 5, // The length of each line
-            width: 3, // The line thickness
-            radius: 10, // The radius of the inner circle
-            corners: 1, // Corner roundness (0..1)
-            rotate: 0, // The rotation offset
-            direction: 1, // 1: clockwise, -1: counterclockwise
-            color: '#000', // #rgb or #rrggbb or array of colors
-            speed: 1, // Rounds per second
-            trail: 60, // Afterglow percentage
-            shadow: true, // Whether to render a shadow
-            hwaccel: true, // Whether to use hardware acceleration
-            className: 'spinner', // The CSS class to assign to the spinner
-            zIndex: 2e9, // The z-index (defaults to 2000000000)
-            top: 'auto', // Top position relative to parent in px
-            left: 'auto' // Left position relative to parent in px
-        };
-
-        var target = document.getElementById('spinner');
-        var spinner = new Spinner(opts).spin(target);
-
-        $('#close').on('click', function() {
-            wizard.close();
-        })
+        $("button.cta-main").on('click', function(e) {
+          // Open Checkout with further options
+          handler.open({
+            name: 'Mira Herbals',
+            description: 'Mira Hair Oil Kit($79.99)',
+            amount: 7999
+          });
+          e.preventDefault();
+        });
     })(jQuery);
 </script>
 </body>

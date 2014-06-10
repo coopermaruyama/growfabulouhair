@@ -108,15 +108,22 @@
   margin-bottom: 0px;
   padding-bottom: 0px;
   margin-top: 48px;
+  font-family: 'Open Sans';
+  font-weight: 700;
+  letter-spacing: -1px;
+  text-shadow: 0px 0px 7px #fff,0px 0px 12px #fff,0px 0px 12px #fff,0px 0px 12px #fff;
 }
 
 .title h2{
-  opacity: .7;
+  opacity: .5;
   color: #000;
   font-size: 26px;
   margin-top: 0px;
-  margin-top: 15px;
+  margin-top: 9px;
   margin-bottom: 30px;
+  font-family: 'Open sans';
+  font-weight: 500;
+  letter-spacing: -1px;
 }
 
 
@@ -156,6 +163,14 @@
 .controls ul li{
   display: inline;
   margin-right: 10px;
+  img {
+    border-radius:999px;
+  }
+  &.active {
+   img {
+    box-shadow: 0px 0px 6px rgb(255, 149, 0),0px 0px 6px rgb(255, 149, 0);
+   }
+  }
 }
 
 .controls ul li:last-child{
@@ -197,54 +212,37 @@
 }
 
 .checklist button {
-  &:hover {-webkit-filter: saturate(0.5);}
-  &:before, .before {
-    content: "";
-    position: absolute;
-    z-index:100;
-    left: -44px;
-    top: 0;
-    display: block;
-    height: 94px;
-    width: 44px;
-    background: url(../images/button_left.gif) no-repeat 0 0;
-  }
-
-  &:after, .after {
-    content: "";
-    position: absolute;
-    z-index: 100;
-    right: -44px;
-    top:0;
-    display: block;
-    height: 94px;
-    width: 44px;
-    background: url(../images/button_right.gif) no-repeat 100% 0;
-  }
+  &:hover {-webkit-filter: saturate(1.5);}
 
   position: relative;
   margin: 0px 44px;
   display: inline-block;
-  height: 94px;
-  width: auto;
+  height: 105px;
+  width: 445px;
   overflow: visible;
-  background: url(../images/button_middle.gif) repeat-x 0 0;
-
+  background: url(../images/button_bg.png) repeat-x 0 0;
   color: #fff;
-  font-size: 29px;
-  .lh-drop-shadow(0 -1px 1px rgba(0,0,0,0.43));
-  line-height: 24px;
-  padding-top: 8px;
-
+  font-size: 25px;
+  line-height: 22px;
+  padding-top: 1px;
   border: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-shadow: border-box;
+  font-weight: 700;
+  font-family: 'Open Sans';
+  text-shadow: 0px -1px rgba(0,0,0,.9);
+  .lh-drop-shadow(0 -1px 1px rgba(0,0,0,0.43));
 }
 
 .checklist button span{
-  font-size: 18px;
+  font-size: 17px;
+  font-weight: 500;
+  opacity: .8;
 }
 
 p.notice{
-  text-align: left;
+  text-align: center;
   padding-left: 20px;
   font-size: 18px;
   margin-top: 10px;
@@ -255,9 +253,8 @@ p.notice{
 .ideal{
   width: 100%;
   min-height: 71px;
-  background-color: #000;
-  opacity: .4;
-  border-radius: 4px;
+  background-color: rgba(0,0,0,.3);
+  border-radius: 66px;
   margin-top: 20px;
   color: #fff;
   text-align: center;
@@ -288,6 +285,10 @@ p.notice{
 
 #main{
   background-color: #fff;
+  p {
+    line-height: 27px;
+    font-size: 16px;
+  }
 }
 
 .texttop{
@@ -314,7 +315,28 @@ p.notice{
 .before-and-after {
   overflow: hidden;
   padding-left: 75px;
+  overflow: hidden;
+  position: relative;
+  #before-after-list {
+    .before-after-list-item{
+      position: relative;
+      display: none;
+      &:first-child {
+        display:block;
+      }
+      &.moving {
+        position: absolute;
+        top:0;
+        display: block !important;
+        .after {
+          position: absolute;
+          left:100%;
+        }
+      }
+    }
+  }
 }
+
 .smalltitle{
   text-align: left;
   clear:both;
