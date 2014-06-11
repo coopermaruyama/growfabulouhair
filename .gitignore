@@ -29,3 +29,11 @@ old
 
 # Compiled CSS
 styles/*.css
+
+# Don't save configuration files to github. That's a BAD IDEA.
+config/*.ini
+
+# Don't add log files to github either.
+logs/*
+
+
