@@ -31,7 +31,8 @@ class Database {
      * @return PDO
      */
     public static function getConnection($connType=self::CONNECTION_DEFAULT) {
-        $configFile = realpath(__DIR__.'/../../config/db.ini');
+        $configFile = dirname(__FILE__).'/../../../config/db.ini';
+        $configFile = realpath($configFile);
         $config     = parse_ini_file($configFile, true);
         if (!isset(self::$connections[$connType])) {
             switch ($connType) {

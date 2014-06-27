@@ -5,13 +5,16 @@ error_reporting(E_ALL);
 
 require $_SERVER['DOCUMENT_ROOT']."/lib/stripe-php/Stripe.php";
 extract($_POST);
-error_log(basename(__FILE__).' -> POST = '.print_r($_POST, true));
+//error_log(basename(__FILE__).' -> POST = '.print_r($_POST, true));
 
 $metadata = array_intersect_key($_POST, array('order_id' => 1, 'first_name' => 1, 'last_name' => 1, 'email' => 1, 'total' => 1));
-error_log('metadata: '.print_r($metadata, true));
+//error_log('metadata: '.print_r($metadata, true));
 
 if (isset($_POST['stripe_token'])) {
+    // test key
     Stripe::setApiKey("sk_test_JsbjJK07Z5mmV69D5fl5ZBEO");
+    // live key
+    //Stripe::setApiKey("sk_live_tuoeHuQH25nFWGohTBnDm7gL");
     $error   = '';
     $success = '';
     try {

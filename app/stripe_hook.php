@@ -10,10 +10,10 @@ $body = @file_get_contents('php://input');
 if (!empty($body)) {
     // convert from JSON
     $data = json_decode($body);
-    // we only catch and record "charge" responses right now.
-    if ($data->object == "charge") {
-        require_once('lib/Config.php');
-        require_once('lib/Database.php');
+    // we only catch and record "charge.succeeded" responses right now.
+    if ($data->object == "charge.succeeded") {
+        require_once('./lib/Config.php');
+        require_once('./lib/Database.php');
         $dbh = Database::getConnection();
         $sth = $dbh->prepare('INSERT INTO stripe_response (order_id, first_name, last_name, email, total, json) '.
                              'VALUES (:order_id, :first_name, :last_name, :email, :total, :json)');
@@ -32,7 +32,7 @@ if (!empty($body)) {
             error_log('dbh->errorInfo(): '.print_r($dbh->errorInfo(), true));
         }
     } else {
-        error_log('stripe_hook did not receive a charge response, ignoring');
+        error_log('stripe_hook did not receive a charge.succeeded response, ignoring');
     }
 } else {
     error_log('stripe_hook did not receive any body content');

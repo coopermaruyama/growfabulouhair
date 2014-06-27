@@ -30,12 +30,12 @@ class Config {
      */
     static public function getInstance($configFile=null, $force=false) {
         if (is_null($configFile)) {
-            $configFile = static::DEFAULT_CONFIG;
+            $configFile = self::DEFAULT_CONFIG;
         }
-        if (!isset(static::$instances[$configFile])) {
-            static::$instances[$configFile] = new static($configFile, $force);
+        if (!isset(self::$instances[$configFile])) {
+            self::$instances[$configFile] = new self($configFile, $force);
         }
-        return static::$instances[$configFile];
+        return self::$instances[$configFile];
     }
 
 
@@ -63,7 +63,6 @@ class Config {
      */
     static final protected function getConfigFilePath($configFile) {
         $file = join(DIRECTORY_SEPARATOR, array(dirname(__FILE__), '..', 'config', $configFile.'.ini'));
-        error_log('file: '.$file);
         return $file;
     }
 
@@ -118,9 +117,9 @@ class Config {
      */
     protected function __construct($configFile=null, $force=false) {
         if (is_null($configFile)) {
-            $configFile = static::DEFAULT_CONFIG;
+            $configFile = self::DEFAULT_CONFIG;
         }
-        if (!file_exists(static::getConfigFilePath($configFile))) {
+        if (!file_exists(self::getConfigFilePath($configFile))) {
             throw new Exception_FileNotFound('Configuration file not found: '.$configFile);
         }
         $this->configFile = $configFile;
@@ -134,7 +133,7 @@ class Config {
      */
     protected function load($force=false) {
         if ($force || is_null($this->configData)) {
-            $this->configData = parse_ini_file(static::getConfigFilePath($this->configFile), true);
+            $this->configData = parse_ini_file(self::getConfigFilePath($this->configFile), true);
         }
     }
 

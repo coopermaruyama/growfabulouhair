@@ -714,14 +714,17 @@ ga('send', 'pageview');
 <script type="text/javascript">
     (function($) {
         var handler = StripeCheckout.configure({
-          key: 'pk_test_HTuEvGleNxrYnGZBByjk3Pps',
+          // test key
+          //key: 'pk_test_HTuEvGleNxrYnGZBByjk3Pps',
+          // live key
+          key: 'pk_live_sR7SS0wmxEc210dunXzzEf45',
           image: 'images/bottle-square.jpg',
           shippingAddress: true,
           token: function(token, args) {
             // Use the token to create the charge with a server-side script.
             // You can access the token ID with `token.id`
             window.stripe_args = args;
-            console.log(args);
+            //console.log(args);
             window.token = token;
 
             var form = $('<form></form>');
